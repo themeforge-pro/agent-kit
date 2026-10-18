@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Зёрна">
+  <rect width="64" height="64" rx="18" fill="#f3e2d5"/>
+  <g fill="#6e4426">
+    <ellipse cx="25" cy="26" rx="12" ry="8.5" transform="rotate(-32 25 26)"/>
+    <ellipse cx="40" cy="40" rx="12" ry="8.5" transform="rotate(-32 40 40)"/>
+  </g>
+  <g fill="none" stroke="#f3e2d5" stroke-width="2.2" stroke-linecap="round">
+    <path d="M19 30c4-4 8-6 12-8"/>
+    <path d="M34 44c4-4 8-6 12-8"/>
+  </g>
+</svg>

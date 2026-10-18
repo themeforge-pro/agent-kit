@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img" aria-label="Зал кофейни">
+  <rect width="800" height="560" fill="#f3e2d5"/>
+  <rect x="0" y="360" width="800" height="200" fill="#e0c6ae"/>
+  <g fill="#c98a56">
+    <rect x="60" y="150" width="200" height="150" rx="14"/>
+    <rect x="300" y="120" width="200" height="180" rx="14"/>
+    <rect x="540" y="170" width="200" height="130" rx="14"/>
+  </g>
+  <g fill="#b4541f" opacity=".85">
+    <circle cx="160" cy="225" r="34"/>
+    <circle cx="400" cy="210" r="34"/>
+    <circle cx="640" cy="235" r="34"/>
+  </g>
+  <g fill="#6e4426">
+    <rect x="120" y="380" width="180" height="16" rx="8"/>
+    <rect x="150" y="396" width="14" height="90"/>
+    <rect x="256" y="396" width="14" height="90"/>
+    <rect x="500" y="380" width="180" height="16" rx="8"/>
+    <rect x="530" y="396" width="14" height="90"/>
+    <rect x="636" y="396" width="14" height="90"/>
+  </g>
+</svg>

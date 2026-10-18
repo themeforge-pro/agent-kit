@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site options — Warm Corner</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<!--
+  The options page. It is never published: ThemeForge turns a page named
+  `theme-options` into the site-wide field group instead of a template, and the
+  values entered there are what the header and footer of every page read.
+  Keeping the same field NAMES as in the layout is the whole trick — `opt-text`
+  named "Phone" here and in the header is one field, not two.
+-->
+<body wp-fields-group="Site options">
+
+  <main class="section">
+    <div class="container">
+      <h1>Site-wide details</h1>
+      <p>These fields show up on every page — in the header and in the footer.</p>
+
+      <p><img src="assets/logo.png" alt="Logo" opt-image="Logo"></p>
+      <p opt-text="Site name">Warm Corner</p>
+      <p opt-area="Footer about">A coffee shop and a small roastery on Garden Street. Open every day.</p>
+
+      <p opt-text="Phone">+1 (555) 010-0199</p>
+      <p opt-text="Email">hello@example.com</p>
+      <p opt-text="Address">14 Garden Street, Portland</p>
+
+      <p opt-text="Hours weekdays">Mon–Fri 8:00–22:00</p>
+      <p opt-text="Hours weekend">Sat–Sun 9:00–23:00</p>
+
+      <p opt-text="Copyright">© 2026 Warm Corner. Demo site.</p>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Warm Corner</title>
+  <meta name="description" content="Address, opening hours and a table request form for Warm Corner.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body wp-fields-group="Contact">
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.png" alt="Warm Corner" opt-image="Logo">
+        <b opt-text="Site name">Warm Corner</b>
+      </a>
+      <nav class="nav">
+        <ul wp-menu="Main menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container about">
+        <div class="about__text">
+          <span class="eyebrow" fld-text="Eyebrow">Come by</span>
+          <h2 fld-text="Title">14 Garden Street — entrance from the yard</h2>
+          <p fld-area="Directions">Seven minutes on foot from the tram stop. There is a bike rack in the yard and four power sockets by the large tables.</p>
+
+          <div fld-editor="Page text">
+            <p><b>Opening hours:</b> weekdays 8:00 to 22:00, weekends 9:00 to 23:00.</p>
+            <p>For an evening table it is better to book ahead — by phone or through the form next to this text.</p>
+          </div>
+
+          <form class="form">
+            <input type="text" name="name" placeholder="Your name">
+            <input type="tel" name="phone" placeholder="Phone">
+            <textarea name="message" placeholder="When, and for how many people"></textarea>
+            <button type="submit">Request a table</button>
+          </form>
+        </div>
+        <div class="about__art">
+          <img src="assets/about.png" alt="The room" fld-image="Image">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div>
+          <h4>Warm Corner</h4>
+          <p opt-area="Footer about">A coffee shop and a small roastery on Garden Street. Open every day.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p opt-text="Address">14 Garden Street, Portland</p>
+          <p><a href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a></p>
+          <p><a href="mailto:hello@example.com"><span opt-text="Email">hello@example.com</span></a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p opt-text="Hours weekdays">Mon–Fri 8:00–22:00</p>
+          <p opt-text="Hours weekend">Sat–Sun 9:00–23:00</p>
+        </div>
+      </div>
+      <div class="footer__bottom" opt-text="Copyright">© 2026 Warm Corner. Demo site.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

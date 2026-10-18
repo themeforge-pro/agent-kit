@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warm Corner — coffee on Garden Street</title>
+  <meta name="description" content="Warm Corner: small-batch roasting every week, breakfast until noon, a quiet room to work in.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<!-- wp-fields-group names the field group this template gets in wp-admin. -->
+<body wp-fields-group="Home">
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.png" alt="Warm Corner" opt-image="Logo">
+        <b opt-text="Site name">Warm Corner</b>
+      </a>
+      <nav class="nav">
+        <!-- The whole list is replaced by a WordPress menu of this name. -->
+        <ul wp-menu="Main menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow" fld-text="Eyebrow">14 Garden Street · open from 8am</span>
+          <h1 fld-text="Title">Coffee worth turning off the main road for</h1>
+          <p fld-area="Lead">We roast once a week in small batches, brew on two grinders, and never rush anyone who came in with a laptop. Breakfast until noon, pastries until they are gone.</p>
+          <a class="btn btn--primary" href="menu.html" fld-link="Menu button">See the menu</a>
+          <a class="btn btn--ghost" href="contacts.html" fld-link="Directions button">How to find us</a>
+        </div>
+        <div class="hero__art">
+          <img src="assets/hero.png" alt="A cup on the counter by the window" fld-image="Hero image">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="section__head">
+          <h2 fld-text="Showcase title">What people order most</h2>
+          <p fld-area="Showcase text">Everything is made on our own roast. Prices are for the medium size.</p>
+        </div>
+
+        <!-- fld-loop = repeater. Every row carries the same field names: the value
+             extractor reads them all, so an unannotated sibling would arrive empty. -->
+        <div class="cards" fld-loop="Showcase">
+          <article class="card">
+            <img src="assets/icon-latte.png" alt="Latte" fld-image="Image">
+            <h3 fld-text="Name">Filter latte</h3>
+            <p fld-text="Description">Mild, on milk from a local farm, no syrup.</p>
+            <span class="price" fld-text="Price">$4.20</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-croissant.png" alt="Croissant" fld-image="Image">
+            <h3 fld-text="Name">Cinnamon croissant</h3>
+            <p fld-text="Description">Baked in the morning, usually gone by ten.</p>
+            <span class="price" fld-text="Price">$3.10</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-beans.png" alt="Beans" fld-image="Image">
+            <h3 fld-text="Name">Beans to take home</h3>
+            <p fld-text="Description">250 g bag, ground for the way you brew.</p>
+            <span class="price" fld-text="Price">$11.00</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about">
+        <div class="about__text">
+          <h2 fld-text="About title">Two paragraphs about us</h2>
+          <!-- fld-editor = the visual editor in wp-admin, so the owner can format. -->
+          <div fld-editor="About text">
+            <p>We opened in 2019 in an old workshop: we kept the brick, added light and large tables. One of the founders is always behind the counter — if the coffee tastes off, say so and we will brew it again.</p>
+            <p>On Thursdays we run free tastings of the new roast, on weekends we bring out board games. Dogs are welcome and the Wi-Fi password is on the wall.</p>
+          </div>
+        </div>
+        <div class="about__art">
+          <img src="assets/about.png" alt="The room" fld-image="About image">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="facts">
+          <div class="fact"><b fld-text="Fact 1 number">7 years</b><span fld-text="Fact 1 label">in the same room</span></div>
+          <div class="fact"><b fld-text="Fact 2 number">3 kg</b><span fld-text="Fact 2 label">roasted every week</span></div>
+          <div class="fact"><b fld-text="Fact 3 number">until noon</b><span fld-text="Fact 3 label">breakfast every day</span></div>
+          <div class="fact"><b fld-text="Fact 4 number">free</b><span fld-text="Fact 4 label">second espresso if you are working</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div>
+          <h4>Warm Corner</h4>
+          <p opt-area="Footer about">A coffee shop and a small roastery on Garden Street. Open every day.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p opt-text="Address">14 Garden Street, Portland</p>
+          <p><a href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a></p>
+          <p><a href="mailto:hello@example.com"><span opt-text="Email">hello@example.com</span></a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p opt-text="Hours weekdays">Mon–Fri 8:00–22:00</p>
+          <p opt-text="Hours weekend">Sat–Sun 9:00–23:00</p>
+        </div>
+      </div>
+      <div class="footer__bottom" opt-text="Copyright">© 2026 Warm Corner. Demo site.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

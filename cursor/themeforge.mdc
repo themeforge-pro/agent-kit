@@ -1,0 +1,19 @@
+---
+description: ThemeForge markup — turning HTML into a WordPress theme with an editable admin
+globs: ["**/*.html"]
+alwaysApply: false
+---
+
+When the person wants this HTML site on WordPress with an editable admin (ThemeForge):
+
+1. Agree a site map first: page files and slugs (the file name decides the template), content types,
+   what is site-wide (goes into `theme-options.html`), languages. Wait for confirmation.
+2. Fetch the rules, never mark up from memory: `https://themeforge.pro/ai`, then `?m=core` always,
+   `?m=build` when generating, and only the modules the site needs (`pages`, `blog`, `cpt`,
+   `woocommerce`, `deploy`, `legacy`).
+3. Attribute each section as you write it: `fld-*` page fields, `opt-*` site-wide settings, `tax-*`
+   category fields, `wp-*` WordPress (posts, menus, products). `wp-fields-group` on every `<body>`.
+4. Check: `POST https://themeforge.pro/api/validate-markup` with
+   `{"pages":[{"name":"index.html","html":"…"}]}` — the whole set in one request — until `"ok": true`.
+   Or `node scripts/validate.mjs <folder>`.
+5. Hand over per `?m=deploy`: one ZIP of the site's contents with `index.html` at the root.

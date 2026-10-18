@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — Warm Corner</title>
+  <meta name="description" content="The Warm Corner menu: coffee on our own roast, tea, pastries and breakfast.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body wp-fields-group="Menu">
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.png" alt="Warm Corner" opt-image="Logo">
+        <b opt-text="Site name">Warm Corner</b>
+      </a>
+      <nav class="nav">
+        <ul wp-menu="Main menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" fld-text="Eyebrow">Updated every season</span>
+          <h2 fld-text="Title">Menu</h2>
+          <p fld-area="Lead">Espresso runs on our “Warm” blend — Brazil and Ethiopia, medium roast. Filter is brewed on a V60 or an AeroPress; ask the barista which one suits today’s bean.</p>
+        </div>
+
+        <div class="cards" fld-loop="Drinks">
+          <article class="card">
+            <img src="assets/icon-latte.png" alt="Latte" fld-image="Image">
+            <h3 fld-text="Name">Latte</h3>
+            <p fld-text="Description">Double espresso and milk, no syrup.</p>
+            <span class="price" fld-text="Price">$4.20</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-latte.png" alt="Cappuccino" fld-image="Image">
+            <h3 fld-text="Name">Cappuccino</h3>
+            <p fld-text="Description">Dense foam, 250 ml.</p>
+            <span class="price" fld-text="Price">$3.90</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-beans.png" alt="Filter" fld-image="Image">
+            <h3 fld-text="Name">Filter of the day</h3>
+            <p fld-text="Description">A different bean each day — ask which one.</p>
+            <span class="price" fld-text="Price">$3.40</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-tea.png" alt="Tea" fld-image="Image">
+            <h3 fld-text="Name">Oolong tea</h3>
+            <p fld-text="Description">Brewed in a pot, enough for two.</p>
+            <span class="price" fld-text="Price">$3.60</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="section__head">
+          <h2 fld-text="Kitchen title">Kitchen</h2>
+          <p fld-area="Kitchen text">We cook it ourselves. Breakfast runs until noon, pastries until they are gone.</p>
+        </div>
+
+        <div class="cards" fld-loop="Kitchen">
+          <article class="card">
+            <img src="assets/icon-croissant.png" alt="Croissant" fld-image="Image">
+            <h3 fld-text="Name">Cinnamon croissant</h3>
+            <p fld-text="Description">Laminated dough, cinnamon, a little orange zest.</p>
+            <span class="price" fld-text="Price">$3.10</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-croissant.png" alt="Pancakes" fld-image="Image">
+            <h3 fld-text="Name">Buttermilk pancakes</h3>
+            <p fld-text="Description">With sour cream and blackcurrant jam.</p>
+            <span class="price" fld-text="Price">$6.40</span>
+          </article>
+          <article class="card">
+            <img src="assets/icon-croissant.png" alt="Toast" fld-image="Image">
+            <h3 fld-text="Name">Avocado toast</h3>
+            <p fld-text="Description">On bread from the bakery next door, with a poached egg.</p>
+            <span class="price" fld-text="Price">$7.20</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div>
+          <h4>Warm Corner</h4>
+          <p opt-area="Footer about">A coffee shop and a small roastery on Garden Street. Open every day.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p opt-text="Address">14 Garden Street, Portland</p>
+          <p><a href="tel:+15550100199"><span opt-text="Phone">+1 (555) 010-0199</span></a></p>
+          <p><a href="mailto:hello@example.com"><span opt-text="Email">hello@example.com</span></a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p opt-text="Hours weekdays">Mon–Fri 8:00–22:00</p>
+          <p opt-text="Hours weekend">Sat–Sun 9:00–23:00</p>
+        </div>
+      </div>
+      <div class="footer__bottom" opt-text="Copyright">© 2026 Warm Corner. Demo site.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

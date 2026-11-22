@@ -9,3 +9,6 @@ This project's HTML is meant to become a WordPress theme with an editable admin 
 - Check every change: `node scripts/validate.mjs <site-folder>` or
   `POST https://themeforge.pro/api/validate-markup` with all pages in one request, until `"ok": true`.
 - Hand over per `https://themeforge.pro/ai?m=deploy`.
+- Source by link: the site can take its HTML from a ZIP in Google Drive or a GitHub repository on every
+  update — see `skills/themeforge-source-link/SKILL.md`, releases in `skills/themeforge-drive-release/`
+  and `skills/themeforge-github/`. Field texts are WordPress content: edit them in the admin.

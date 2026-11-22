@@ -13,10 +13,15 @@ from new HTML without losing the client’s content.
 
 | Path | What |
 |---|---|
-| `skills/themeforge-markup/SKILL.md` | Skill for Claude Code: site map → rules → markup → check → hand-over |
-| `cursor/themeforge.mdc` | The same as a Cursor rule |
+| `skills/themeforge-markup/` | Skill: site map → rules → markup → check → hand-over |
+| `skills/themeforge-source-link/` | Skill: connect the site's source by link — a ZIP in Google Drive or a GitHub repository |
+| `skills/themeforge-drive-release/` | Skill: release a change through Drive — a new version of the same file, then Update |
+| `skills/themeforge-github/` | Skill: work through GitHub — commits, release tags, read-only key, roll back |
+| `cursor/themeforge.mdc` | The markup skill as a Cursor rule |
 | `AGENTS.md` | The same for other agents that read `AGENTS.md` |
 | `scripts/validate.mjs` | Checks a folder of HTML pages against the real generator (Node 18+, no dependencies) |
+| `scripts/install.mjs` | Copies the skills to where your tool looks for them |
+| `scripts/check-skills.mjs` | Checks the skills themselves (run in CI) |
 | `examples/warm-corner/` | A small café site, fully marked up: 3 pages and `theme-options.html` |
 
 The kit does not copy the markup rules. They live at [themeforge.pro/ai](https://themeforge.pro/ai) and
@@ -24,19 +29,38 @@ change with the generator, so the skill tells the assistant to fetch them every 
 
 ## Install
 
-**Claude Code** — copy the skill into your skills folder:
+The skills are plain [Agent Skills](https://agentskills.io) folders (`SKILL.md` with a name and a
+description) — the same files work in **Claude Code, Codex and Antigravity**.
 
 ```bash
 git clone https://github.com/themeforge-pro/agent-kit
-cp -r agent-kit/skills/themeforge-markup ~/.claude/skills/        # every project
-# or: cp -r agent-kit/skills/themeforge-markup .claude/skills/   # this project only
+cd agent-kit
+node scripts/install.mjs claude        # → ~/.claude/skills/
+node scripts/install.mjs codex         # → ~/.codex/skills/
+node scripts/install.mjs antigravity   # → ~/.gemini/config/skills/
+# add --project to install into the current project:
+#   Claude Code → .claude/skills/, Codex and Antigravity → .agents/skills/
 ```
 
-Then ask: *“Make this site a WordPress theme with ThemeForge”*.
+Or copy the folders from `skills/` by hand to the same places. Then ask, for example:
+*“Make this site a WordPress theme with ThemeForge”* or *“Connect my site source from GitHub”*.
 
 **Cursor** — copy `cursor/themeforge.mdc` to `.cursor/rules/` of your project.
 
 **Any assistant** — point it at `https://themeforge.pro/ai` or put `AGENTS.md` in the project root.
+
+## Keep the source by link
+
+A ThemeForge theme is rebuilt from the site's HTML. Instead of uploading a ZIP in wp-admin every time,
+the site can download it on every **Update theme from project** from:
+
+- **Google Drive** — one ZIP file shared “Anyone with the link”; a release is a new version of the same
+  file (`themeforge-drive-release`);
+- **GitHub** — a repository (public, or private with a read-only key); a release is a push, optionally
+  a tag (`themeforge-github`).
+
+The history stays where you keep the files. While a link is set, the markup is edited at the link, not on
+the site. Texts and images marked as fields are WordPress content and are edited in the admin.
 
 ## Check your markup
 

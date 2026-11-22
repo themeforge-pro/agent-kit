@@ -21,7 +21,7 @@ from new HTML without losing the client’s content.
 | `AGENTS.md` | The same for other agents that read `AGENTS.md` |
 | `scripts/validate.mjs` | Checks a folder of HTML pages against the real generator (Node 18+, no dependencies) |
 | `scripts/install.mjs` | Copies the skills to where your tool looks for them |
-| `scripts/check-skills.mjs` | Checks the skills themselves (run in CI) |
+| `scripts/check-skills.mjs` | Checks the skills themselves |
 | `examples/warm-corner/` | A small café site, fully marked up: 3 pages and `theme-options.html` |
 
 The kit does not copy the markup rules. They live at [themeforge.pro/ai](https://themeforge.pro/ai) and
